@@ -1,0 +1,40 @@
+.statistics {
+  border: 1px solid #D7DADA;
+  border-radius: 5px;
+}
+
+.title {
+  margin: 0;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stat-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  flex: 1 0 0px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  min-width: 55px;
+  align-items: center;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.stat-list .label {
+  color: inherit;
+}
+
+.percentage {
+  font-size: 16px;
+  font-weight: 600;
+}

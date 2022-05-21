@@ -1,3 +1,5 @@
+import format from "components/helpers/format";
+
 export default function Profile(props) {
   const { avatar, username, tag, location, stats } = props;
   return (
@@ -28,8 +30,4 @@ export default function Profile(props) {
       </ul>
     </div>
   )
-}
-
-function format(x) {
-  return isNaN(x) ? "" : x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
