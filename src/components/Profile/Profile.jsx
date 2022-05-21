@@ -34,10 +34,10 @@ export default function Profile({ avatar, username, tag, location, stats: { foll
 }
 
 Profile.propTypes = {
-  avatar: PropTypes.string,
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   followers: PropTypes.number,
   views: PropTypes.number,
   likes: PropTypes.number,

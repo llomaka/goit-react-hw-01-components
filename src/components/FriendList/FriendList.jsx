@@ -24,13 +24,12 @@ function FriendListItem({ avatar, name, isOnline, id }) {
 }
 
 FriendList.propTypes = {
-  friends: PropTypes.array,
-  item: PropTypes.object,
+  friends: PropTypes.array.isRequired,
 }
 
 FriendListItem.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
-  id: PropTypes.number,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
 }
