@@ -1,4 +1,4 @@
-.friend-list {
+.friendList {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -8,7 +8,7 @@
   border-radius: 5px;
 }
 
-.friend-list .item {
+.item {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -25,11 +25,11 @@
   border-radius: 50%;
 }
 
-.friend-list .avatar {
+.avatar {
   border-radius: 5px;
 }
 
-.friend-list .name {
+.name {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
