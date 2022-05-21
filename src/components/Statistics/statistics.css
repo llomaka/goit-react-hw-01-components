@@ -19,7 +19,7 @@
   list-style: none;
 }
 
-.item {
+.stat-list .item {
   flex: 1 0 0px;
   display: flex;
   gap: 10px;
