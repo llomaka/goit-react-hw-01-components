@@ -5,9 +5,7 @@ export default function Statistics(props) {
   const { title, stats } = props;
   return (
     <section className="statistics">
-      <StatisticsHeader
-        title={title}
-      />
+      {title && (<h2 className="title">{title}</h2>)}
       <ul className="stat-list">
         {stats.map(item => (
           StatisticsItem(item)
@@ -24,11 +22,4 @@ function StatisticsItem(props) {
       <span className="percentage">{format(props.percentage)}%</span>
     </li>
   )
-}
-
-function StatisticsHeader(props) {
-  const { title } = props;
-  if (title) return (
-    <h2 className="title">{title}</h2>
-  ); else return null;
 }

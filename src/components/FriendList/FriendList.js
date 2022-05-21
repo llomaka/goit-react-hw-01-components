@@ -14,17 +14,11 @@ function FriendListItem(props) {
   const { avatar, name, isOnline, id } = props.friend;
   return (
     <li className="item" key={id}>
-      <IsOnlineElement
-        isOnline={isOnline}
-      />
+      {isOnline
+        ? (<span className="status" style={{ backgroundColor: '#32CD32'}}></span>)
+        : (<span className="status"></span>)}
       <img className="avatar" src={avatar} alt={name + " avatar"} width="48" />
       <p className="name">{name}</p>
     </li>
   )
-}
-
-function IsOnlineElement(props) {
-  const { isOnline } = props;
-  if (isOnline) return (<span className="status" style={{ backgroundColor: '#32CD32', }}></span>);
-  else return (<span className="status"></span>);
 }
