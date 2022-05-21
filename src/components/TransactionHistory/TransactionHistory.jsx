@@ -1,5 +1,6 @@
 import styles from './TransactionHistory.module.css';
 import PropTypes from 'prop-types';
+import TransactionItem from 'components/TransactionItem/TransactionItem';
 
 export default function TransactionHistory({ items }) {
   return (
@@ -12,29 +13,20 @@ export default function TransactionHistory({ items }) {
         </tr>
       </thead>
       <tbody>
-        {items.map(item => TransactionItem(item))}
+        {items.map(({ id, type, amount, currency }) =>
+          <TransactionItem
+            key={id}
+            id={id}
+            type={type}
+            amount={amount}
+            currency={currency}
+          />
+        )}
       </tbody>
     </table>
   )
 }
 
-function TransactionItem({ id, type, amount, currency }) {
-  return (
-    <tr key={id}>
-      <td style={{textTransform: 'capitalize'}}>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
-  )
-}
-
 TransactionHistory.propTypes = {
   items: PropTypes.array.isRequired,
-}
-
-TransactionItem.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
 }
