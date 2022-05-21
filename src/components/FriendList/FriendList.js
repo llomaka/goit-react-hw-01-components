@@ -25,6 +25,6 @@ function FriendListItem(props) {
 
 function IsOnlineElement(props) {
   const { isOnline } = props;
-  if (isOnline) return (<span className="status" style={{ backgroundColor: 'green', }}></span>);
+  if (isOnline) return (<span className="status" style={{ backgroundColor: '#32CD32', }}></span>);
   else return (<span className="status"></span>);
 }
