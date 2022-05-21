@@ -18,6 +18,10 @@
   rgba(0, 0, 0, 0.23) 0px 2px 3px;
 }
 
+.item:hover {
+  background-color: #cfcfcf;
+}
+
 .status {
   width: 15px;
   height: 15px;
